@@ -1,0 +1,22 @@
+.Header {
+  display: flex;
+  background-color: wheat;
+  height: 40px;
+  justify-content: center;
+}
+
+.Button1 {
+  justify-content: center;
+  height: 20px;
+  width: 80px;
+  background-color: bisque;
+  align-self: center;
+  display: flex;
+  margin-left: 5px;
+}
+
+.HeaderText {
+  justify-content: left;
+  color: black;
+  float: left;
+}
