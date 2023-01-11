@@ -2,12 +2,31 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.scss'
 import reportWebVitals from './reportWebVitals'
+// import { Dashboard } from './Routes/Dashboard/Dashboard'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Main } from './Routes/Main/Main'
+import { ErrorPage } from './Routes/ErrorPage/ErrorPage'
 import { Dashboard } from './Routes/Dashboard/Dashboard'
-
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Main />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: 'Dashboard',
+    element: <Dashboard />
+  },
+  {
+    path: 'Logs',
+    element: <Dashboard />
+    // implement Logs page
+  }
+])
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <Dashboard />
+    <RouterProvider router={router} />
   </React.StrictMode>
 )
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
-
+import './Dashboard.scss'
 // interface DashboardProps {}
 
 export const Dashboard: React.FC = () => {
@@ -12,7 +12,7 @@ export const Dashboard: React.FC = () => {
     <div className="Dashboard" style={{ textAlign: 'center' }}>
       <h1 style={{ textAlign: 'center' }}> Steam News Finder</h1>
       <input placeholder="semen"></input>
-      <ProductCard />
+      <ProductCard name="semen" surname="" />
     </div>
   )
 }
